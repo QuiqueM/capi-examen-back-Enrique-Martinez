@@ -20,6 +20,8 @@ class UserDomicilio extends Migration
             $table->string('colonia');
             $table->string('cp');
             $table->string('ciudad');
+
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
